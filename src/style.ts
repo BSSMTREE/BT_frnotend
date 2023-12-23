@@ -3,7 +3,11 @@ import header from "assets/header.svg";
 
 export const Layout = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  background-color: #fefdf8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const Header = styled.div<{ isModalopen: boolean }>`
@@ -16,7 +20,7 @@ export const Header = styled.div<{ isModalopen: boolean }>`
   align-items: center;
   font-size: 2rem;
   padding: 10px;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 0 0 20px 20px;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
   ${(props) =>
@@ -39,12 +43,12 @@ export const Count = styled.span`
 `;
 
 export const MainText = styled.div`
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 600;
 `;
 
 export const SubText = styled.div`
-  font-size: 10px;
+  font-size: 0.75rem;
   font-weight: 400;
 `;
 
@@ -63,6 +67,6 @@ export const Dark = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.25);
 `;

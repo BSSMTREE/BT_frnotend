@@ -3,7 +3,7 @@ import writeBackground from "assets/writeBackground.svg";
 
 export const Write = styled.form`
   position: fixed;
-  width: 70%;
+  width: 80%;
   aspect-ratio: 2/3;
   top: 50%;
   left: 50%;
@@ -18,13 +18,13 @@ export const Write = styled.form`
 `;
 
 export const ToFrom = styled.div`
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 1px;
 `;
 
 export const Name = styled.input`
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: white;
   background: transparent;
   border: none;
@@ -38,7 +38,7 @@ export const Name = styled.input`
 export const Message = styled.textarea`
   width: 100%;
   height: 55%;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   color: white;
   background: transparent;
   border: none;
@@ -56,7 +56,7 @@ export const ButtonLayout = styled.div`
 `;
 
 export const Cancel = styled.button`
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   padding: 5px 15px;
   color: white;
   background-color: #db4455;
@@ -65,7 +65,7 @@ export const Cancel = styled.button`
 `;
 
 export const Submit = styled.button`
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   padding: 5px 50px;
   color: white;
   background-color: #5ea152;
