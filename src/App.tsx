@@ -25,9 +25,9 @@ function App() {
       <S.Tree
         isModalopen={isOpenWrite}
         src={tree}
-        onClick={() => setIsOpenWrite(!isOpenWrite)}
+        onClick={() => setIsOpenWrite(true)}
       />
-      {isOpenWrite && <Write />}
+      {isOpenWrite && <Write setIsOpenWrite={setIsOpenWrite} />}
     </S.Layout>
   );
 }
