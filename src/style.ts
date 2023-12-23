@@ -39,17 +39,17 @@ export const TextLayout = styled.div<{ isModalopen: boolean }>`
     `}
 `;
 export const Count = styled.span`
-  font-weight: 700;
+  font-weight: 800;
 `;
 
 export const MainText = styled.div`
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
 `;
 
 export const SubText = styled.div`
-  font-size: 0.75rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 500;
 `;
 
 export const Tree = styled.img<{ isModalopen: boolean }>`

@@ -2,9 +2,12 @@ import styled from "styled-components";
 import writeBackground from "assets/writeBackground.svg";
 
 export const Write = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   width: 80%;
-  aspect-ratio: 2/3;
+  aspect-ratio: 4/5;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -14,22 +17,24 @@ export const Write = styled.form`
   background-position: center;
   border-radius: 10px;
   filter: blur(0px);
-  padding: 30px 30px 0 30px;
+  padding: 30px 30px 10px 30px;
 `;
 
 export const NameLayout = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 export const ToFrom = styled.div`
   font-size: 1rem;
+  font-weight: 600;
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 1px;
 `;
 
 export const Name = styled.input`
   font-size: 1.2rem;
+  font-weight: 500;
   color: white;
   width: 5rem;
   background: transparent;
@@ -48,13 +53,13 @@ export const Arrow = styled.img`
 export const Message = styled.textarea`
   width: 100%;
   height: 55%;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: white;
   background: transparent;
   border: none;
   outline: none;
   margin-top: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   &::placeholder {
     color: rgba(255, 255, 255, 0.75);
   }
@@ -67,6 +72,7 @@ export const ButtonLayout = styled.div`
 
 export const Cancel = styled.button`
   font-size: 0.9rem;
+  font-weight: 500;
   width: 27.5%;
   padding: 10px 0;
   color: white;
@@ -77,6 +83,7 @@ export const Cancel = styled.button`
 
 export const Submit = styled.button`
   font-size: 0.9rem;
+  font-weight: 500;
   width: 67.5%;
   padding: 10px 0;
   color: white;
