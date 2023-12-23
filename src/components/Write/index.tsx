@@ -1,4 +1,5 @@
 import * as S from "./style";
+import arrow from "assets/arrow.svg";
 
 interface IWriteProps {
   setIsOpenWrite: React.Dispatch<React.SetStateAction<boolean>>;
@@ -7,10 +8,18 @@ interface IWriteProps {
 function Write({ setIsOpenWrite }: IWriteProps) {
   return (
     <S.Write>
-      <S.ToFrom>To.</S.ToFrom>
-      <S.Name placeholder="보낼 사람(최대 8글자)"></S.Name>
-      <S.ToFrom>From.</S.ToFrom>
-      <S.Name placeholder="닉네임(최대 8글자)"></S.Name>
+      <S.NameLayout>
+        <div>
+          <S.ToFrom>From.</S.ToFrom>
+          <S.Name placeholder="본인 이름"></S.Name>
+        </div>
+        <S.Arrow src={arrow} />
+        <div>
+          <S.ToFrom>To.</S.ToFrom>
+          <S.Name placeholder="보낼 사람"></S.Name>
+        </div>
+      </S.NameLayout>
+
       <S.Message placeholder="따듯한 메세지를 적어주세요." />
       <S.ButtonLayout>
         <S.Cancel type="button" onClick={() => setIsOpenWrite(false)}>

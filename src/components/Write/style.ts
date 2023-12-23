@@ -17,15 +17,21 @@ export const Write = styled.form`
   padding: 30px 30px 0 30px;
 `;
 
+export const NameLayout = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
 export const ToFrom = styled.div`
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 1px;
 `;
 
 export const Name = styled.input`
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: white;
+  width: 5rem;
   background: transparent;
   border: none;
   outline: none;
@@ -35,10 +41,14 @@ export const Name = styled.input`
   }
 `;
 
+export const Arrow = styled.img`
+  width: 2.5rem;
+`
+
 export const Message = styled.textarea`
   width: 100%;
   height: 55%;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: white;
   background: transparent;
   border: none;
@@ -56,19 +66,21 @@ export const ButtonLayout = styled.div`
 `;
 
 export const Cancel = styled.button`
-  font-size: 0.8rem;
-  padding: 10px 10%;
+  font-size: 0.9rem;
+  width: 27.5%;
+  padding: 10px 0;
   color: white;
   background-color: #db4455;
   border: none;
-  border-radius: 10px;
+  border-radius: 7.5px;
 `;
 
 export const Submit = styled.button`
-  font-size: 0.8rem;
-  padding: 10px 18.5%;
+  font-size: 0.9rem;
+  width: 67.5%;
+  padding: 10px 0;
   color: white;
   background-color: #5ea152;
   border: none;
-  border-radius: 10px;
+  border-radius: 7.5px;
 `;

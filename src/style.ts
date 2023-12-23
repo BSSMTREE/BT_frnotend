@@ -4,10 +4,10 @@ import header from "assets/header.svg";
 export const Layout = styled.div`
   width: 100%;
   height: 100%;
-  background-color: #fefdf8;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #fefdf8;
 `;
 
 export const Header = styled.div<{ isModalopen: boolean }>`
