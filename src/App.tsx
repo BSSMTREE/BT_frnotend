@@ -1,6 +1,10 @@
+import * as S from "./style";
+
 function App() {
   return (
-    <div></div>
+    <S.Layout>
+      <S.Header>BSSMTREE</S.Header>
+    </S.Layout>
   );
 }
 
