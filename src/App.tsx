@@ -31,7 +31,7 @@ function App() {
       />
       {(isOpenWrite || isOpenList) && <S.Dark />}
       {isOpenWrite && <Write setIsOpenWrite={setIsOpenWrite} />}
-      {isOpenList && <List />}
+      {isOpenList && <List setIsOpenList={setIsOpenList} />}
     </S.Layout>
   );
 }
