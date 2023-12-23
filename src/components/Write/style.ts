@@ -17,7 +17,7 @@ export const Write = styled.form`
   background-position: center;
   border-radius: 10px;
   filter: blur(0px);
-  padding: 30px 30px 10px 30px;
+  padding: 30px 30px 15px 30px;
 `;
 
 export const NameLayout = styled.div`
@@ -26,14 +26,14 @@ export const NameLayout = styled.div`
 `;
 
 export const ToFrom = styled.div`
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 1px;
 `;
 
 export const Name = styled.input`
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   font-weight: 500;
   color: white;
   width: 5rem;
@@ -53,7 +53,7 @@ export const Arrow = styled.img`
 export const Message = styled.textarea`
   width: 100%;
   height: 55%;
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: white;
   background: transparent;
   border: none;
@@ -71,7 +71,7 @@ export const ButtonLayout = styled.div`
 `;
 
 export const Cancel = styled.button`
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 500;
   width: 27.5%;
   padding: 10px 0;
@@ -82,7 +82,7 @@ export const Cancel = styled.button`
 `;
 
 export const Submit = styled.button`
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 500;
   width: 67.5%;
   padding: 10px 0;
