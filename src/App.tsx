@@ -2,13 +2,15 @@ import Write from "components/Write";
 import * as S from "./style";
 import tree from "assets/tree.svg";
 import { useState } from "react";
+import List from "components/List";
 
 function App() {
   const [isOpenWrite, setIsOpenWrite] = useState(false);
+  const [isOpenList, setIsOpenList] = useState(false);
   return (
     <S.Layout>
-      <S.Header isModalopen={isOpenWrite}>BSSMTREE</S.Header>
-      <S.TextLayout isModalopen={isOpenWrite}>
+      <S.Header isModalopen={isOpenWrite || isOpenList}>BSSMTREE</S.Header>
+      <S.TextLayout isModalopen={isOpenWrite || isOpenList}>
         <S.MainText>
           부산소프트웨어마이스터고의 트리에요
           <br />
@@ -23,11 +25,12 @@ function App() {
         </S.MainText>
       </S.TextLayout>
       <S.Tree
-        isModalopen={isOpenWrite}
+        isModalopen={isOpenWrite || isOpenList}
         src={tree}
         onClick={() => setIsOpenWrite(true)}
       />
       {isOpenWrite && <Write setIsOpenWrite={setIsOpenWrite} />}
+      {isOpenList && <List />}
     </S.Layout>
   );
 }
