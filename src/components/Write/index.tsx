@@ -16,10 +16,11 @@ function Write({ setIsOpenWrite }: IWriteProps) {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (writer === "" || recipient === "" || detail === "")
-        return toast.error("모든 필수 내용들을 입력해주세요!")
+      return toast.error("모든 필수 내용들을 입력해주세요!");
     try {
       await letter(writer, recipient, detail);
       toast.success("성공적으로 편지를 전송했어요!");
+      setIsOpenWrite(false);
     } catch {
       toast.error("편지를 발송하지 못하였습니다!");
     }
