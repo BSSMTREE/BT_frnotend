@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import header from "assets/header.png";
+import header from "assets/header.svg";
 
 export const Layout = styled.div`
   width: 100%;
@@ -35,4 +35,8 @@ export const MainText = styled.div`
 export const SubText = styled.div`
   font-size: 10px;
   font-weight: 400;
+`
+
+export const Tree = styled.img`
+  width: 100%;
 `

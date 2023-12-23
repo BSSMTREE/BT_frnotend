@@ -1,4 +1,5 @@
 import * as S from "./style";
+import tree from 'assets/tree.svg'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           </S.SubText>
         </S.MainText>
       </S.TextLayout>
+      <S.Tree src={tree} />
     </S.Layout>
   );
 }
