@@ -14,7 +14,7 @@ export const Write = styled.form`
   background-position: center;
   border-radius: 10px;
   filter: blur(0px);
-  padding: 30px;
+  padding: 30px 30px 0 30px;
 `;
 
 export const ToFrom = styled.div`
@@ -33,16 +33,42 @@ export const Name = styled.input`
   &::placeholder {
     color: rgba(255, 255, 255, 0.75);
   }
-`
+`;
 
-export const Message = styled.input`
+export const Message = styled.textarea`
+  width: 100%;
+  height: 55%;
   font-size: 0.6rem;
   color: white;
   background: transparent;
   border: none;
   outline: none;
   margin-top: 10px;
+  margin-bottom: 25px;
   &::placeholder {
     color: rgba(255, 255, 255, 0.75);
   }
-`
+`;
+
+export const ButtonLayout = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const Cancel = styled.button`
+  font-size: 0.7rem;
+  padding: 5px 15px;
+  color: white;
+  background-color: #db4455;
+  border: none;
+  border-radius: 5px;
+`;
+
+export const Submit = styled.button`
+  font-size: 0.7rem;
+  padding: 5px 50px;
+  color: white;
+  background-color: #5ea152;
+  border: none;
+  border-radius: 5px;
+`;
