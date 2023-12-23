@@ -29,6 +29,7 @@ function App() {
         src={tree}
         onClick={() => setIsOpenWrite(true)}
       />
+      {(isOpenWrite || isOpenList) && <S.Dark />}
       {isOpenWrite && <Write setIsOpenWrite={setIsOpenWrite} />}
       {isOpenList && <List />}
     </S.Layout>

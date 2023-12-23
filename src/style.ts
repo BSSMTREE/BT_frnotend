@@ -56,3 +56,13 @@ export const Tree = styled.img<{ isModalopen: boolean }>`
       filter: blur(1.5px);
     `}
 `;
+
+export const Dark = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.25);
+`;
