@@ -36,11 +36,21 @@ function App() {
             현재 <S.Count>{data.length}</S.Count>개의 편지가 쌓여있어요
             <br />
             <br />
-            <S.SubText>
-              트리를 눌러 편지를 써주세요!
-              <br />
-              트리 속 편지는 12월 26일에 공개되요.
-            </S.SubText>
+            {date.getMonth() === 11 &&
+            date.getDate() >= 20 &&
+            date.getDate() <= 25 ? (
+              <S.SubText>
+                트리를 눌러 편지를 써주세요!
+                <br />
+                트리 속 편지는 12월 26일에 공개되요.
+              </S.SubText>
+            ) : (
+              <S.SubText>
+                트리 속 편지가 열렸어요!
+                <br />
+                트리를 눌러 트리 속 편지를 확인할 수 있어요.
+              </S.SubText>
+            )}
           </S.MainText>
         </S.TextLayout>
         <S.Tree
