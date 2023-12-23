@@ -4,7 +4,7 @@ import tree from "assets/tree.svg";
 import { useEffect, useState } from "react";
 import List from "components/List";
 import { toast, ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import { bring } from "apis/bring";
 import IDataProps from "interfaces/IDataProps";
 
@@ -12,9 +12,7 @@ function App() {
   const date = new Date();
   const [isOpenWrite, setIsOpenWrite] = useState(false);
   const [isOpenList, setIsOpenList] = useState(false);
-  const [data, setData] = useState<IDataProps[]>([
-    { writer: "", recipient: "", detail: "" },
-  ]);
+  const [data, setData] = useState<IDataProps[]>([]);
 
   useEffect(() => {
     const getData = async () => {
@@ -41,7 +39,7 @@ function App() {
             <S.SubText>
               트리를 눌러 편지를 써주세요!
               <br />
-              트리 속 편지는 12월 26일에 공개돼요.
+              트리 속 편지는 12월 26일에 공개되요.
             </S.SubText>
           </S.MainText>
         </S.TextLayout>
