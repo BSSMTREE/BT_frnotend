@@ -40,6 +40,7 @@ export const TextLayout = styled.div<{ isModalopen: boolean }>`
 `;
 export const Count = styled.span`
   font-weight: 800;
+  color: #5ea152;
 `;
 
 export const MainText = styled.div`
