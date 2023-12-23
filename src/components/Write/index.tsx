@@ -1,5 +1,5 @@
 import * as S from "./style";
-import arrow from "assets/arrow.svg";
+import arrow from "assets/rightArrow1.svg";
 
 interface IWriteProps {
   setIsOpenWrite: React.Dispatch<React.SetStateAction<boolean>>;

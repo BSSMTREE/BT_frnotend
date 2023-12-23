@@ -27,7 +27,7 @@ function App() {
       <S.Tree
         isModalopen={isOpenWrite || isOpenList}
         src={tree}
-        onClick={() => setIsOpenWrite(true)}
+        onClick={() => setIsOpenList(true)}
       />
       {(isOpenWrite || isOpenList) && <S.Dark />}
       {isOpenWrite && <Write setIsOpenWrite={setIsOpenWrite} />}
