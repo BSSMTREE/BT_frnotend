@@ -16,7 +16,7 @@ function Write({ setIsOpenWrite }: IWriteProps) {
         <S.Cancel type="button" onClick={() => setIsOpenWrite(false)}>
           이전
         </S.Cancel>
-        <S.Submit type="submit">보내기</S.Submit>
+        <S.Submit type="submit">메세지 남기기</S.Submit>
       </S.ButtonLayout>
     </S.Write>
   );

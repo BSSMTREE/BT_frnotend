@@ -57,18 +57,18 @@ export const ButtonLayout = styled.div`
 
 export const Cancel = styled.button`
   font-size: 0.8rem;
-  padding: 5px 15px;
+  padding: 10px 10%;
   color: white;
   background-color: #db4455;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
 `;
 
 export const Submit = styled.button`
   font-size: 0.8rem;
-  padding: 5px 50px;
+  padding: 10px 18.5%;
   color: white;
   background-color: #5ea152;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
 `;
