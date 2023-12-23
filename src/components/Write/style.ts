@@ -26,14 +26,14 @@ export const NameLayout = styled.div`
 `;
 
 export const ToFrom = styled.div`
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.5);
   margin-bottom: 1px;
 `;
 
 export const Name = styled.input`
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 500;
   color: white;
   width: 5rem;
@@ -71,7 +71,7 @@ export const ButtonLayout = styled.div`
 `;
 
 export const Cancel = styled.button`
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   width: 27.5%;
   padding: 10px 0;
@@ -82,7 +82,7 @@ export const Cancel = styled.button`
 `;
 
 export const Submit = styled.button`
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   width: 67.5%;
   padding: 10px 0;

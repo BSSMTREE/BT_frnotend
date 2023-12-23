@@ -16,7 +16,7 @@ function Write({ setIsOpenWrite }: IWriteProps) {
         <S.Arrow src={arrow} />
         <div>
           <S.ToFrom>To.</S.ToFrom>
-          <S.Name placeholder="보낼 사람"></S.Name>
+          <S.Name placeholder="받는사람"></S.Name>
         </div>
       </S.NameLayout>
 
