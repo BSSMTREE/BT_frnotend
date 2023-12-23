@@ -3,24 +3,14 @@ import * as S from "./style";
 import arrow from "assets/rightArrow1.svg";
 import leftArrow from "assets/leftArrow.svg";
 import rightArrow from "assets/rightArrow2.svg";
+import IDataProps from "interfaces/IDataProps";
 
 interface IListProps {
   setIsOpenList: React.Dispatch<React.SetStateAction<boolean>>;
+  data: IDataProps[];
 }
 
-function List({ setIsOpenList }: IListProps) {
-  const data = [
-    {
-      writer: "전영현",
-      recipient: "한태영",
-      detail: "배고프다",
-    },
-    {
-      writer: "한태영",
-      recipient: "전영현",
-      detail: "전영현은 천재다\n영현갓",
-    },
-  ];
+function List({ setIsOpenList, data }: IListProps) {
   const [page, setPage] = useState(0);
   return (
     <S.Layout>
