@@ -3,7 +3,7 @@ import * as S from "./style";
 import tree from "assets/tree.svg";
 import leftArrow from "assets/pageLeftArrow.svg";
 import rightArrow from "assets/pageRightArrow.svg";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import List from "components/List";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -28,7 +28,7 @@ function App() {
       setCurrentPage(currentPage + 1);
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (currentPage === Math.ceil(data.length / 10)) {
       setPageSlice([(currentPage - 1) * 10, data.length]);
       return;
@@ -37,7 +37,7 @@ function App() {
     // eslint-disable-next-line
   }, [currentPage]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const getData = async () => {
       try {
         const res = await bring();
