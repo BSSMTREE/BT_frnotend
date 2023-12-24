@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import * as S from "./style";
 import arrow from "assets/rightArrow1.svg";
 import { toast } from "react-toastify";
@@ -12,6 +12,11 @@ function Write({ setIsOpenWrite }: IWriteProps) {
   const [writer, setWriter] = useState("");
   const [recipient, setRecipient] = useState("");
   const [detail, setDetail] = useState("");
+  const nameRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (nameRef.current) nameRef.current.focus();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -32,6 +37,7 @@ function Write({ setIsOpenWrite }: IWriteProps) {
           <S.ToFrom>From.</S.ToFrom>
           <S.Name
             placeholder="닉네임"
+            ref={nameRef}
             onChange={(e) => setWriter(e.currentTarget.value)}
           ></S.Name>
         </div>
