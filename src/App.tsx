@@ -96,7 +96,7 @@ function App() {
               index={i + 1}
               src={
                 decorationList[
-                  Math.round(Math.random() * decorationList.length)
+                  Math.round(Math.random() * (decorationList.length - 1))
                 ]
               }
             />

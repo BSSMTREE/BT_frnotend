@@ -86,7 +86,7 @@ const get삼각수 = (index: number) =>
   Math.ceil((Math.sqrt(8 * index + 1) - 1) / 2);
 
 const calculateTop = (index: number) => {
-  return `${get삼각수(index) * 80 + 0}px`;
+  return `${get삼각수(index) * 70 + 0}px`;
 };
 
 const calculateLeft = (index: number) => {
@@ -117,9 +117,9 @@ const calculateLeft = (index: number) => {
 export const TreeItem = styled.img<{ index: number }>`
   position: absolute;
   top: ${({ index }) => calculateTop(index)};
-  left: ${({ index }) => `calc(${calculateLeft(index)} + 45%);`};
-  width: 40px;
-  height: 40px;
+  left: ${({ index }) => `calc(${calculateLeft(index)} + 42%);`};
+  width: 60px;
+  height: 60px;
 `;
 
 export const Dark = styled.div`
