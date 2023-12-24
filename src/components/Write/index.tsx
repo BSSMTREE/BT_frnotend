@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import * as S from "./style";
 import arrow from "assets/rightArrow1.svg";
 import { toast } from "react-toastify";
@@ -14,7 +14,7 @@ function Write({ setIsOpenWrite }: IWriteProps) {
   const [detail, setDetail] = useState("");
   const nameRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (nameRef.current) nameRef.current.focus();
   }, []);
 
