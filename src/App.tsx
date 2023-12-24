@@ -18,6 +18,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSlice, setPageSlice] = useState([0, 0]);
   const [data, setData] = useState<IDataProps[]>([]);
+  const [decoration, setDecoration] = useState([]);
 
   const handleIncreasePageClick = () => {
     if (currentPage !== 1) setCurrentPage(currentPage - 1);
@@ -42,12 +43,19 @@ function App() {
       try {
         const res = await bring();
         setData(res);
+        setDecoration(
+          res.map(() =>
+            Math.round(Math.random() * (decorationList.length - 1)),
+          ),
+        );
       } catch {
         toast.error("데이터 정보를 받아오지 못하였습니다!");
       }
     };
     getData();
   }, []);
+
+  useLayoutEffect(() => {}, [data]);
 
   return (
     <>
@@ -92,14 +100,7 @@ function App() {
             }}
           />
           {data.slice(pageSlice[0], pageSlice[1]).map((_, i) => (
-            <S.TreeItem
-              index={i + 1}
-              src={
-                decorationList[
-                  Math.round(Math.random() * (decorationList.length - 1))
-                ]
-              }
-            />
+            <S.TreeItem index={i + 1} src={decorationList[decoration[(currentPage-1)*10 + i]]} />
           ))}
           <S.RightArrow onClick={handleDecreasePageClick} src={rightArrow} />
         </S.TreeContainer>
