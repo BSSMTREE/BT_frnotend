@@ -53,13 +53,73 @@ export const SubText = styled.div`
   font-weight: 500;
 `;
 
+export const TreeContainer = styled.div`
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+`;
+
 export const Tree = styled.img<{ isModalopen: boolean }>`
   width: 100%;
+  position: absolute;
   ${(props) =>
     props.isModalopen &&
     css`
       filter: blur(1.5px);
     `}
+`;
+
+export const LeftArrow = styled.img`
+  position: absolute;
+  top: 36%;
+  z-index: 50;
+  width: 30px;
+  left: 10px;
+`;
+
+export const RightArrow = styled(LeftArrow)`
+  right: 10px;
+  left: auto;
+`;
+
+const get삼각수 = (index: number) =>
+  Math.ceil((Math.sqrt(8 * index + 1) - 1) / 2);
+
+const calculateTop = (index: number) => {
+  return `${get삼각수(index) * 80 + 0}px`;
+};
+
+const calculateLeft = (index: number) => {
+  switch (index) {
+    case 1:
+      return `0px`;
+    case 2:
+      return `-34px`;
+    case 3:
+      return `34px`;
+    case 4:
+      return `-70px`;
+    case 5:
+      return `0px`;
+    case 6:
+      return `70px`;
+    case 7:
+      return `-100px`;
+    case 8:
+      return `-34px`;
+    case 9:
+      return `34px`;
+    case 10:
+      return `100px`;
+  }
+};
+
+export const TreeItem = styled.img<{ index: number }>`
+  position: absolute;
+  top: ${({ index }) => calculateTop(index)};
+  left: ${({ index }) => `calc(${calculateLeft(index)} + 45%);`};
+  width: 40px;
+  height: 40px;
 `;
 
 export const Dark = styled.div`
