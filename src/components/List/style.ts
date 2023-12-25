@@ -74,12 +74,12 @@ export const Arrow = styled.img`
 
 export const Message = styled.div`
   width: 100%;
-  height: 55%;
+  min-height: 55%;
   font-size: 1rem;
   color: white;
   margin-top: 10px;
   margin-bottom: 20px;
-  white-space: pre;
+  word-break: break-all;
 `;
 
 export const Cancel = styled.button`
@@ -87,6 +87,7 @@ export const Cancel = styled.button`
   font-weight: 500;
   width: 100%;
   padding: 10px 0;
+  margin-bottom: 10px;
   color: white;
   background-color: #db4455;
   border: none;
