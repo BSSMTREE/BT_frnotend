@@ -69,17 +69,29 @@ export const Tree = styled.img<{ isModalopen: boolean }>`
     `}
 `;
 
-export const LeftArrow = styled.img`
+export const LeftArrow = styled.img<{ isModalopen: boolean }>`
   position: absolute;
   top: 36%;
   z-index: 50;
   width: 30px;
   left: 10px;
+  ${(props) =>
+    props.isModalopen &&
+    css`
+      opacity: 0.2;
+      filter: blur(1.5px);
+    `}
 `;
 
-export const RightArrow = styled(LeftArrow)`
+export const RightArrow = styled(LeftArrow)<{ isModalopen: boolean }>`
   right: 10px;
   left: auto;
+  ${(props) =>
+    props.isModalopen &&
+    css`
+      opacity: 0.2;
+      filter: blur(1.5px);
+    `}
 `;
 
 const get삼각수 = (index: number) =>

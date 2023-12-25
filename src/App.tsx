@@ -85,7 +85,11 @@ function App() {
           </S.MainText>
         </S.TextLayout>
         <S.TreeContainer>
-          <S.LeftArrow onClick={handleIncreasePageClick} src={leftArrow} />
+          <S.LeftArrow
+            isModalopen={isOpenWrite || isOpenList}
+            onClick={handleIncreasePageClick}
+            src={leftArrow}
+          />
           <S.Tree
             isModalopen={isOpenWrite || isOpenList}
             src={tree}
@@ -100,9 +104,16 @@ function App() {
             }}
           />
           {data.slice(pageSlice[0], pageSlice[1]).map((_, i) => (
-            <S.TreeItem index={i + 1} src={decorationList[decoration[(currentPage-1)*10 + i]]} />
+            <S.TreeItem
+              index={i + 1}
+              src={decorationList[decoration[(currentPage - 1) * 10 + i]]}
+            />
           ))}
-          <S.RightArrow onClick={handleDecreasePageClick} src={rightArrow} />
+          <S.RightArrow
+            isModalopen={isOpenWrite || isOpenList}
+            onClick={handleDecreasePageClick}
+            src={rightArrow}
+          />
         </S.TreeContainer>
         {(isOpenWrite || isOpenList) && <S.Dark />}
         {isOpenWrite && <Write setIsOpenWrite={setIsOpenWrite} />}
